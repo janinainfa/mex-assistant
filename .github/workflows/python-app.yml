@@ -38,6 +38,6 @@ jobs:
 
     - name: Create AppImage
       run: |
-        linuxdeploy --appdir ./build
+        appimage-builder appimage.yml
 
       
