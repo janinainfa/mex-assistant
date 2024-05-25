@@ -1,0 +1,16 @@
+Source: nazwa_twojego_pakietu
+Section: misc
+Priority: optional
+Maintainer: Twój_Nazwa <Twój_Adres_Email>
+Build-Depends: debhelper (>= 9), dh-make, inne_pakiet, inne_pakiet2
+Standards-Version: 3.9.8
+Homepage: https://adres.strony/internetowej/z_projektem
+Vcs-Git: https://github.com/Twój_Użytkownik/nazwa_repozytorium.git
+Vcs-Browser: https://github.com/Twój_Użytkownik/nazwa_repozytorium
+
+Package: nazwa_twojego_pakietu
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Krótki opis twojego pakietu
+ Tutaj możesz dodać dłuższy opis swojego pakietu.
+ W kilku liniach opisz, co pakiet robi, jak go używać itp.
