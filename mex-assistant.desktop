@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Mex Assistant
+Exec=usr/bin/mex-assistant
+Icon=usr/share/icons/hicolor/256x256/apps/moj_program.png
+Comment=Opis mojego programu
+Categories=Utility;Application;
+Terminal=true
