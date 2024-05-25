@@ -43,5 +43,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: main
-        path: ./main
+        path: dist/main
       
