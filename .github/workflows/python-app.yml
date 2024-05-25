@@ -39,5 +39,9 @@ jobs:
     - name: Build Exec
       run: |
         pyinstaller main.py
-
+    - name: Saving Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: main
+        path: ./main
       
