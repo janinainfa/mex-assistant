@@ -1,4 +1,5 @@
 numpy~=2.0.0rc2
+ffmpeg-python~=0.2.0
 sounddevice~=0.4.6
 soundfile~=0.12.1
 requests~=2.32.2
@@ -6,3 +7,5 @@ translators~=5.9.2
 gTTS~=2.5.1
 playsound~=1.3.0
 pytube~=15.0.0
+future~=1.0.0
+pydub~=0.25.1

@@ -5,7 +5,6 @@ import speech_recognition as sr
 import soundfile as sf
 from tkinter import *
 from gtts import gTTS
-from playsound import playsound
 import webbrowser
 import requests
 import translators as ts
@@ -14,6 +13,8 @@ import urllib.request
 import re
 import datetime
 import json
+from pydub import AudioSegment
+from pydub.playback import play
 
 tk = Tk()
 tk.title("Mex Assistant")
@@ -23,7 +24,8 @@ r = sr.Recognizer()
 def speak(text):
     myobj = gTTS(text=text, lang='pl', slow=False)
     myobj.save("output.mp3")
-    playsound("output.mp3")
+    sound = AudioSegment.from_mp3('output.mp3')
+    play(sound)
 
 def takeVoice(time):
     speak('Mów')
