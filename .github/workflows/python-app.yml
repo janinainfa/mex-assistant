@@ -38,6 +38,6 @@ jobs:
 
     - name: Create AppImage
       run: |
-        appimage-builder -recipe appimage.yml
+        appimage-builder --recipe appimage.yml
 
       
