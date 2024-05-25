@@ -53,7 +53,7 @@ jobs:
     - name: Copy icon and desktop file
       run: |
         cp mex-assistant.desktop AppDir/mex-assistant.desktop
-        cp icon.jpg AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.png
+        cp icon.jpg AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.jpg
 
     - name: Create Appimage
       run: |
