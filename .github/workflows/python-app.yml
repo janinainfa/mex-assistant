@@ -39,10 +39,10 @@ jobs:
     - name: Build Exec
       run: |
         pip install pyinstaller
-        pyinstaller main.py
+        pyinstaller --name=mex-assistant --onefile main.py
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: main
+        name: mex-assistant
         path: dist/
       
