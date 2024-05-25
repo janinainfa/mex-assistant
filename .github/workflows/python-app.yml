@@ -36,13 +36,30 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
 
-    - name: Build Exec
+    - name: Download linuxdeploy
       run: |
-        pip install pyinstaller
-        pyinstaller --name=mex-assistant --onefile main.py
-    - name: Saving Artifacts
+        wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+        chmod +x linuxdeploy-x86_64.AppImage
+
+    - name: Create AppDir
+      run: |
+        mkdir -p AppDir/usr/bin
+        cp dist/mex-assistant AppDir/usr/bin/
+        # Dodaj inne pliki, jeśli są potrzebne, np. ikony, pliki desktop, itp.
+
+    - name: Copy icon and desktop file
+      run: |
+        cp mex-assistant.desktop AppDir/mex-assistant.desktop
+        cp icon.jpg AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.png
+
+    - name: Create Appimage
+      run: |
+        ./linuxdeploy-x86_64.AppImage --appdir AppDir --output appimage
+
+    - name: Save artifact
       uses: actions/upload-artifact@v2
       with:
-        name: mex-assistant
-        path: dist/
+        name: mex-assistant.AppImage
+        path: mex-assistant-*.AppImage  # Zakładając, że AppImage będzie miało nazwę z wersją
+
       
