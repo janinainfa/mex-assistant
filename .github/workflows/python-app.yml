@@ -36,7 +36,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Build with Pyinstaller
-      run: pyinstaller --onefile --name mex-assistant main.py
+      run: |
+          pip install pyinstaller
+          pyinstaller --onefile --name mex-assistant main.py
     - name: Download linuxdeploy
       run: |
         wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
