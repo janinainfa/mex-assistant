@@ -3,6 +3,6 @@ app:
   version: 1.0.0
   script: /main.py
   interpreter: python3
-  icon: path/do/ikony/aplikacji.png
+  icon: icon.jpg
   dependencies:
     - python3
