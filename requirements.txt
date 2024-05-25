@@ -8,3 +8,4 @@ gTTS~=2.5.1
 pytube~=15.0.0
 future~=1.0.0
 pydub~=0.25.1
+speechrecognition ~= 3.10.4
