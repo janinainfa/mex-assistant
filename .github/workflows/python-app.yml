@@ -54,7 +54,7 @@ jobs:
       run: |
         mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
         cp mex-assistant.desktop AppDir/mex-assistant.desktop
-        cp icon.jpg AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.jpg
+        cp icon.png AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.png
 
     - name: Create Appimage
       run: |
