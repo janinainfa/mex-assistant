@@ -57,7 +57,7 @@
      <string>&amp;Plik</string>
     </property>
     <addaction name="action_Ustawienia"/>
-    <addaction name="action_Zako_cz"/>
+    <addaction name="action_Zakoncz"/>
    </widget>
    <addaction name="menu_Plik"/>
   </widget>
@@ -67,7 +67,7 @@
     <string>&amp;Ustawienia</string>
    </property>
   </action>
-  <action name="action_Zako_cz">
+  <action name="action_Zakoncz">
    <property name="text">
     <string>&amp;Zakończ</string>
    </property>

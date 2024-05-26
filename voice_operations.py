@@ -13,18 +13,30 @@ def speak(text):
     sound = AudioSegment.from_mp3('output.mp3')
     play(sound)
 
-def takeVoice(time):
+
+def takeVoice(time, window=None):
     r = sr.Recognizer()
     speak('Mów')
-    print("Nagrywanie")
+    printText("Nagrywanie", window)
     myrecording = sd.rec(int(time * 44100), samplerate=44100, channels=2)
     sd.wait()  # Wait until recording is finished
     sf.write('input.flac', myrecording, 44100)  # Save as WAV file
-    print("Rozpoznawanie")
+    printText("Rozpoznawanie", window)
 
     file = sr.AudioFile('input.flac')
 
     with file as source:
         audio = r.record(source)
 
-    return r.recognize_google(audio, language="pl-PL")
+    try:
+        return r.recognize_google(audio, language="pl-PL")
+    except:
+        speak("Nie udało się rozpoznać tekstu.")
+        return ""
+
+def printText(text, window):
+    if window:
+        window.stateLabel.setText(text)
+        window.repaint()
+    else:
+        print(text)
