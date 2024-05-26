@@ -35,37 +35,14 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Build with Pyinstaller
+    - name: Build Exec
       run: |
-          pip install pyinstaller
-          pyinstaller --onefile --name mex-assistant main.py
-    - name: Download linuxdeploy
-      run: |
-        wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
-        chmod +x linuxdeploy-x86_64.AppImage
-
-    - name: Create AppDir
-      run: |
-        mkdir -p AppDir/usr/bin
-        cp dist/mex-assistant AppDir/usr/bin/
-        # Dodaj inne pliki, jeśli są potrzebne, np. ikony, pliki desktop, itp.
-
-    - name: Copy icon and desktop file
-      run: |
-        mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
-        cp mex-assistant.desktop AppDir/mex-assistant.desktop
-        cp icon.jpg AppDir/usr/share/icons/hicolor/256x256/apps/mex-assistant.jpg
-
-    - name: Create Appimage
-      run: |
-        sudo add-apt-repository universe
-        sudo apt install libfuse2
-        ./linuxdeploy-x86_64.AppImage --appdir AppDir --output appimage
-
-    - name: Save artifact
+        pip install pyinstaller
+        pyinstaller --name=mex-assistant --onefile main.py
+    - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: mex-assistant.AppImage
-        path: mex-assistant-*.AppImage  # Zakładając, że AppImage będzie miało nazwę z wersją
+        name: mex-assistant
+        path: dist/
 
       
