@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Moj Program
+Name=Mex Assistant
 Exec=usr/bin/mex-assistant
 Icon=mex-assistant
 Comment=Opis mojego programu
