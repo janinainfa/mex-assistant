@@ -39,7 +39,6 @@ jobs:
       run: |
         pip install pyinstaller
         pyinstaller --name=mex-assistant --onefile main.py
-        zip -r dist/mex-assistant.zip
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
