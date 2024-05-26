@@ -34,7 +34,7 @@
        <bool>false</bool>
       </property>
       <property name="text">
-       <string>Ładowanie...</string>
+       <string/>
       </property>
       <property name="alignment">
        <set>Qt::AlignHCenter|Qt::AlignTop</set>

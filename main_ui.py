@@ -26,6 +26,7 @@ class Ui_MainWindow(object):
         self.stateLabel = QtWidgets.QLabel(self.centralwidget)
         self.stateLabel.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.stateLabel.setAutoFillBackground(False)
+        self.stateLabel.setText("")
         self.stateLabel.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.stateLabel.setObjectName("stateLabel")
         self.verticalLayout.addWidget(self.stateLabel)
@@ -54,7 +55,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Mex Assistant"))
         self.speakButton.setText(_translate("MainWindow", "Mów"))
-        self.stateLabel.setText(_translate("MainWindow", "Ładowanie..."))
         self.menu_Plik.setTitle(_translate("MainWindow", "&Plik"))
         self.action_Ustawienia.setText(_translate("MainWindow", "&Ustawienia"))
         self.action_Zakoncz.setText(_translate("MainWindow", "&Zakończ"))
