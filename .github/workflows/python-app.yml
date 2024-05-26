@@ -43,6 +43,6 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: mex-assistant
-        path: dist/mex-assistant.zip
+        path: dist/
 
       
