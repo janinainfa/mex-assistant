@@ -1,7 +1,7 @@
 import configparser
 import re
 import subprocess
-
+import custom_commands as cc
 from voice_operations import *
 
 class CommandProcessing():
@@ -16,6 +16,7 @@ class CommandProcessing():
     def processCommand(self, window):
         command = takeVoice(3, window)
         window.stateLabel.setText(command)
+        window.repaint()
         command = command.lower()
         self.loadConfig()
         for i in self.config:
