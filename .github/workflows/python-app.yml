@@ -40,7 +40,6 @@ jobs:
         pip install pyinstaller
         pyinstaller --name=mex-assistant --onefile main.py
     - name: Saving Artifacts
-    - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: mex-assistant
