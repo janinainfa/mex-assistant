@@ -65,7 +65,7 @@ jobs:
     - name: Save artifact
       uses: actions/upload-artifact@v2
       with:
-        name: mex-assistant.AppImage
-        path: mex-assistant-*.AppImage  # Zakładając, że AppImage będzie miało nazwę z wersją
+        name: Moj_Program.AppImage
+        path: Moj_Program-x86_64.AppImage
 
       
