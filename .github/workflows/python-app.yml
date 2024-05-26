@@ -39,6 +39,9 @@ jobs:
       run: |
         pip install pyinstaller
         pyinstaller --name=mex-assistant --onefile main.py
+        mkdir mex-assistant
+        cp dist/mex-assistant mex-assistant
+        cp mex-assistant.desktop mex/assistant.desktop
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
