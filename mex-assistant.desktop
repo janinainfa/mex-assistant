@@ -2,7 +2,7 @@
 Type=Application
 Name=Moj Program
 Exec=usr/bin/mex-assistant
-Icon=usr/share/icons/hicolor/256x256/apps/mex-assistant
+Icon=mex-assistant
 Comment=Opis mojego programu
 Categories=Utility;
 Terminal=false

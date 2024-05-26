@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added spec file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="update mex-assistant.desktop">
       <change beforePath="$PROJECT_DIR$/mex-assistant.desktop" beforeDir="false" afterPath="$PROJECT_DIR$/mex-assistant.desktop" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716675752607</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update mex-assistant.desktop">
+      <option name="closed" value="true" />
+      <created>1716703226467</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716703226467</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update mex-assistant.desktop">
+      <option name="closed" value="true" />
+      <created>1716703504436</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716703504436</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +219,7 @@
     <MESSAGE value="init version" />
     <MESSAGE value="still testing" />
     <MESSAGE value="added spec file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added spec file" />
+    <MESSAGE value="update mex-assistant.desktop" />
+    <option name="LAST_COMMIT_MESSAGE" value="update mex-assistant.desktop" />
   </component>
 </project>
