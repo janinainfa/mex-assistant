@@ -10,3 +10,4 @@ future~=1.0.0
 pydub~=0.25.1
 speechrecognition ~= 3.10.4
 PyQt5~=5.15.10
+mexui~=1.0.0.dev2

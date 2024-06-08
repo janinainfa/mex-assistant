@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTa
 from PyQt5.uic import loadUi
 from qt_material import apply_stylesheet
 
-from main_ui import Ui_MainWindow
+from mexui import Ui_MainWindow
 
 
 class Window(QMainWindow, Ui_MainWindow):

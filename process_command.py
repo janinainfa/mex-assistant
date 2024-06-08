@@ -21,9 +21,16 @@ class CommandProcessing():
         self.loadConfig()
         for i in self.config:
             if re.search(i, command):
-                if self.config[i]["type"] == "command_line":
-                    subprocess.Popen(self.config[i]["command"])
-                if self.config[i]["type"] == "python":
-                    exec(self.config[i]["command"])
+                try:
+                    if self.config[i]["type"] == "terminal":
+                        subprocess.Popen(self.config[i]["command"].split(" "))
+                    elif self.config[i]["type"] == "python":
+                        exec(self.config[i]["command"])
+                    else:
+                        speak("Nie udało się rozpoznać typu polecenia")
+                except:
+                    speak("Coś poszło nie tak. Upewnij się, że polecenie jest ustawione poprawnie")
+
+                break
 
 
