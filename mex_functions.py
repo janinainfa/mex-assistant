@@ -1,3 +1,5 @@
+import configparser
+
 import sounddevice as sd
 import speech_recognition as sr
 import soundfile as sf
@@ -40,3 +42,8 @@ def printText(text, window):
         window.repaint()
     else:
         print(text)
+
+def loadConfig():
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+    return config

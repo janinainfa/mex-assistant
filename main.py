@@ -1,5 +1,5 @@
 import window
-import voice_operations as vo
+import mex_functions as vo
 import process_command as pc
 
 if __name__ == "__main__":

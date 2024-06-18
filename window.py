@@ -27,13 +27,13 @@ class Window(QMainWindow, Ui_MainWindow):
 
     def openSettings(self):
         settingsWindow = settings.Window()
-        settingsWindow.show()
+        settingsWindow.exec()
 
 
 
 def buildApp(command_processing):
     app = QApplication(sys.argv)
     win = Window(command_processing)
-    apply_stylesheet(app, theme='dark_blue.xml')
+    apply_stylesheet(app, theme='dark_medical.xml', css_file='custom.css')
     win.show()
     sys.exit(app.exec())
