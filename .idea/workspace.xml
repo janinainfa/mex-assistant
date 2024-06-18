@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="created settings window but I can't show it">
-      <change afterPath="$PROJECT_DIR$/custom.css" afterDir="false" />
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/Settings.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Settings.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/build.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/pip_package/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/setup.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voice_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/mex_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718123436314</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there">
+      <option name="closed" value="true" />
+      <created>1718709142552</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1718709142552</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,6 +393,7 @@
     <MESSAGE value="created pip package for ui" />
     <MESSAGE value="added qt-material to requirements.txt" />
     <MESSAGE value="created settings window but I can't show it" />
-    <option name="LAST_COMMIT_MESSAGE" value="created settings window but I can't show it" />
+    <MESSAGE value="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there" />
+    <option name="LAST_COMMIT_MESSAGE" value="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there" />
   </component>
 </project>

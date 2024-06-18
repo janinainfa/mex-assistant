@@ -14,7 +14,7 @@ class CommandProcessing():
         window.repaint()
         command = command.lower()
         config = loadConfig()
-        for i in config:
+        for i in config.sections():
             if re.search(i, command):
                 try:
                     if config[i]["type"] == "terminal":
