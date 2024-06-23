@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there">
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added commands to settings window">
+      <change afterPath="$PROJECT_DIR$/edit_command.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/EditCommand.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/edit_command_ui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Settings.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Settings.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/pip_package/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/build.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/pip_package/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update-ui.sh" beforeDir="false" afterPath="$PROJECT_DIR$/update-ui.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -54,20 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.process_command.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.window.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.build.sh.executor": "Run",
-    "Shell Script.update-ui.sh.executor": "Run",
-    "git-widget-placeholder": "master",
-    "run.code.analysis.last.selected.profile": "aDefault"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.window.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.build.sh.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.update-ui.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -365,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718709142552</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added commands to settings window">
+      <option name="closed" value="true" />
+      <created>1718712074167</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1718712074167</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,6 +405,7 @@
     <MESSAGE value="added qt-material to requirements.txt" />
     <MESSAGE value="created settings window but I can't show it" />
     <MESSAGE value="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there" />
-    <option name="LAST_COMMIT_MESSAGE" value="created settings window, renamed voice_operations.py to mex_functions.py and moved loadConfig() there" />
+    <MESSAGE value="added commands to settings window" />
+    <option name="LAST_COMMIT_MESSAGE" value="added commands to settings window" />
   </component>
 </project>
