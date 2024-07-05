@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, sip
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTableWidgetItem
 from mexui.settings_ui import Ui_Settings
 
@@ -9,16 +9,18 @@ class Window(QDialog, Ui_Settings):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.config = loadConfig()
         self.createCommandLabelsAndButtons()
 
     def createCommandLabelsAndButtons(self):
-        config = loadConfig()
-        sections = config.sections()
+        self.commandsLayout = QtWidgets.QGridLayout()
+        self.commandsLayout.setObjectName("commandsLayout")
+        sections = self.config.sections()
         for row, i in enumerate(sections):
             label = QtWidgets.QLabel(self)
             label.setText(i.capitalize())
             label.setProperty("class", "command_label")
-            self.gridLayout.addWidget(label, row + 2, 0)
+            self.commandsLayout.addWidget(label, row + 2, 0)
             self.createButton("edit", "Edytuj", i, row + 2, 1)
             self.createButton("delete", "Usuń", i, row + 2, 2)
 
@@ -26,7 +28,8 @@ class Window(QDialog, Ui_Settings):
         self.newCommandButton = QtWidgets.QPushButton(self)
         self.newCommandButton.setText("Dodaj nową komendę")
         self.newCommandButton.pressed.connect(lambda: self.buttonClicked("edit"))
-        self.gridLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
+        self.commandsLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
+        self.gridLayout.addLayout(self.commandsLayout, 2, 0, 1, 3)
 
     def buttonClicked(self, action, button=None):
         if action == "edit":
@@ -36,7 +39,8 @@ class Window(QDialog, Ui_Settings):
                 editCommandDialog = edit_command.Window()
             editCommandDialog.exec()
         elif action == "delete":
-            print("delete")
+            command = button.property("command")
+            self.deleteCommand(command)
 
     def createButton(self, action, actionName, command, row, column):
         button = QtWidgets.QPushButton(self)
@@ -44,4 +48,32 @@ class Window(QDialog, Ui_Settings):
         button.setProperty("class", "command_button")
         button.setProperty("command", command)
         button.pressed.connect(lambda button=button: self.buttonClicked(action, button))
-        self.gridLayout.addWidget(button, row, column)
+        self.commandsLayout.addWidget(button, row, column)
+
+    def deleteCommand(self, command):
+        dialogResult = self.openDialog()
+        if dialogResult == QMessageBox.Yes:
+            self.config.remove_section(command)
+            with open("config.ini", "w") as f:
+                self.config.write(f)
+            self.deleteLayout(self.commandsLayout)
+            self.createCommandLabelsAndButtons()
+
+    def deleteLayout(self, layout):
+        if layout is not None:
+            while layout.count():
+                item = layout.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.deleteLater()
+                else:
+                    self.deleteLayout(item.layout())
+            sip.delete(layout)
+
+    def openDialog(self):
+        msgBox = QtWidgets.QMessageBox()
+        msgBox.setText("Na pewno? Tej czynności nie będzie można cofnąć.")
+        msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msgBox.button(QMessageBox.Yes).setText("Tak")
+        msgBox.button(QMessageBox.No).setText("Nie")
+        return msgBox.exec()
