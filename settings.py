@@ -39,6 +39,7 @@ class Window(QDialog, Ui_Settings):
             else:
                 editCommandDialog = edit_command.Window()
             editCommandDialog.exec()
+            self.refreshCommands()
         elif action == "delete":
             command = button.property("command")
             self.deleteCommand(command)
@@ -57,8 +58,7 @@ class Window(QDialog, Ui_Settings):
             self.config.remove_section(command)
             with open("config.ini", "w") as f:
                 self.config.write(f)
-            self.deleteLayout(self.commandsLayout)
-            self.createCommandLabelsAndButtons()
+            self.refreshCommands()
 
     def deleteLayout(self, layout):
         if layout is not None:
@@ -70,3 +70,8 @@ class Window(QDialog, Ui_Settings):
                 else:
                     self.deleteLayout(item.layout())
             sip.delete(layout)
+
+    def refreshCommands(self):
+        self.config = loadConfig()
+        self.deleteLayout(self.commandsLayout)
+        self.createCommandLabelsAndButtons()
