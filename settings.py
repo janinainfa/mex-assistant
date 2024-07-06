@@ -1,3 +1,5 @@
+import subprocess
+
 from PyQt5 import QtWidgets, sip
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTableWidgetItem
 from mexui.settings_ui import Ui_Settings
@@ -21,16 +23,20 @@ class Window(QDialog, Ui_Settings):
             label.setText(i.capitalize())
             label.setProperty("class", "command_label")
             self.commandsLayout.addWidget(label, row + 2, 0)
-            self.createButton("edit", "Edytuj", i, row + 2, 1)
-            self.createButton("delete", "Usuń", i, row + 2, 2)
+            self.createCommandButton("edit", "Edytuj", i, row + 2, 1)
+            self.createCommandButton("delete", "Usuń", i, row + 2, 2)
 
 
         self.newCommandButton = QtWidgets.QPushButton(self)
         self.newCommandButton.setText("Dodaj nową komendę")
         self.newCommandButton.pressed.connect(lambda: self.buttonClicked("edit"))
         self.commandsLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
+        self.openConfigFileButton = QtWidgets.QPushButton(self)
+        self.openConfigFileButton.setText("Otwórz plik konfiguracyjny")
+        self.openConfigFileButton.pressed.connect(lambda: subprocess.Popen(["xdg-open", "config.ini"]))
+        self.commandsLayout.addWidget(self.openConfigFileButton, len(sections) + 3, 0, 1, 3)
+
         self.gridLayout.addLayout(self.commandsLayout, 2, 0, 1, 3)
-        #TODO: add open the config file button
 
     def buttonClicked(self, action, button=None):
         if action == "edit":
@@ -44,7 +50,7 @@ class Window(QDialog, Ui_Settings):
             command = button.property("command")
             self.deleteCommand(command)
 
-    def createButton(self, action, actionName, command, row, column):
+    def createCommandButton(self, action, actionName, command, row, column):
         button = QtWidgets.QPushButton(self)
         button.setText(actionName)
         button.setProperty("class", "command_button")
