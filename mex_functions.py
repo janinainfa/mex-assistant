@@ -3,6 +3,8 @@ import configparser
 import sounddevice as sd
 import speech_recognition as sr
 import soundfile as sf
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 
 from gtts import gTTS
 
@@ -47,3 +49,14 @@ def loadConfig():
     config = configparser.ConfigParser()
     config.read("config.ini")
     return config
+
+def openDialog(message, dialogType):
+    msgBox = QtWidgets.QMessageBox()
+    msgBox.setText(message)
+    if dialogType == 'confirmation':
+        msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msgBox.button(QMessageBox.Yes).setText("Tak")
+        msgBox.button(QMessageBox.No).setText("Nie")
+    elif dialogType == "information":
+        msgBox.setStandardButtons(QMessageBox.Ok)
+    return msgBox.exec()

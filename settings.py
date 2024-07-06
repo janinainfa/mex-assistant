@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTa
 from mexui.settings_ui import Ui_Settings
 
 import edit_command
-from mex_functions import loadConfig
+from mex_functions import loadConfig, openDialog
 
 class Window(QDialog, Ui_Settings):
     def __init__(self, parent=None):
@@ -30,6 +30,7 @@ class Window(QDialog, Ui_Settings):
         self.newCommandButton.pressed.connect(lambda: self.buttonClicked("edit"))
         self.commandsLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
         self.gridLayout.addLayout(self.commandsLayout, 2, 0, 1, 3)
+        #TODO: add open the config file button
 
     def buttonClicked(self, action, button=None):
         if action == "edit":
@@ -51,7 +52,7 @@ class Window(QDialog, Ui_Settings):
         self.commandsLayout.addWidget(button, row, column)
 
     def deleteCommand(self, command):
-        dialogResult = self.openDialog()
+        dialogResult = openDialog("Na pewno? Tej czynności nie będzie można cofnąć.", "confirmation")
         if dialogResult == QMessageBox.Yes:
             self.config.remove_section(command)
             with open("config.ini", "w") as f:
@@ -69,11 +70,3 @@ class Window(QDialog, Ui_Settings):
                 else:
                     self.deleteLayout(item.layout())
             sip.delete(layout)
-
-    def openDialog(self):
-        msgBox = QtWidgets.QMessageBox()
-        msgBox.setText("Na pewno? Tej czynności nie będzie można cofnąć.")
-        msgBox.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
-        msgBox.button(QMessageBox.Yes).setText("Tak")
-        msgBox.button(QMessageBox.No).setText("Nie")
-        return msgBox.exec()

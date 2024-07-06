@@ -2,18 +2,19 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTableWidgetItem
 from mexui.edit_command_ui import Ui_Dialog
 
-import mex_functions
-from mex_functions import loadConfig
+from mex_functions import loadConfig, openDialog
 
 class Window(QDialog, Ui_Dialog):
     def __init__(self, command=None, parent=None):
         super().__init__(parent)
         self.setupUi(self)
         self.connectSignalsSlots()
-        self.config = mex_functions.loadConfig()
+        self.config = loadConfig()
         if command:
             self.command = command
             self.insertValues()
+        else:
+            self.command = None
 
     def insertValues(self):
         self.commandNameEdit.setText(self.command)
@@ -29,4 +30,26 @@ class Window(QDialog, Ui_Dialog):
         self.saveButton.pressed.connect(self.saveCommand)
 
     def saveCommand(self):
-        print("save")
+        commandType = self.comboBox.currentText()
+        commandName = self.commandNameEdit.text()
+        if self.checkValues(commandType, commandName):
+            if self.command:
+                self.config.remove_section(self.command)
+            commandContents = {'type': self.comboBox.currentText().lower(),
+                                'command': self.plainTextEdit.toPlainText()}
+            self.config[commandName] = commandContents
+            with open("config.ini", "w") as f:
+                self.config.write(f)
+            self.reject()
+
+    def checkValues(self, commandType, commandName):
+        if commandName.rstrip() == "":
+            openDialog("Nazwa komendy nie może być pusta", "information")
+            return False
+        if commandType == "Wybierz...":
+            openDialog("Najpierw wybierz rodzaj komendy", "information")
+            return False
+        if (commandName in self.config.sections()) and (not commandName == self.command):
+            dialogResult = openDialog("Taka komenda już istnieje. Czy chcesz ją zamienić?", "confirmation")
+            return dialogResult == QMessageBox.Yes
+        return True
