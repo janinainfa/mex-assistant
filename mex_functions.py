@@ -19,6 +19,8 @@ def speak(text):
 
 
 def takeVoice(time, window=None):
+    config = loadConfig()
+    lang = config["DEFAULT"]["voice_lang"]
     r = sr.Recognizer()
     speak('Mów')
     printText("Nagrywanie", window)
@@ -33,7 +35,7 @@ def takeVoice(time, window=None):
         audio = r.record(source)
 
     try:
-        return r.recognize_google(audio, language="pl-PL")
+        return r.recognize_google(audio, language=lang)
     except:
         speak("Nie udało się rozpoznać tekstu.")
         return ""

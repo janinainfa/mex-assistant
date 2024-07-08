@@ -18,25 +18,25 @@ class Window(QDialog, Ui_Dialog):
 
     def insertValues(self):
         self.commandNameEdit.setText(self.command)
-        self.comboBox.setCurrentIndex(2)
+        self.commandTypeBox.setCurrentIndex(2)
         section = self.config[self.command]
         if section["type"] == ("terminal"):
-            self.comboBox.setCurrentIndex(1)
+            self.commandTypeBox.setCurrentIndex(1)
         else:
-            self.comboBox.setCurrentIndex(2)
-        self.plainTextEdit.setPlainText(section["command"])
+            self.commandTypeBox.setCurrentIndex(2)
+        self.commandEdit.setPlainText(section["command"])
 
     def connectSignalsSlots(self):
         self.saveButton.pressed.connect(self.saveCommand)
 
     def saveCommand(self):
-        commandType = self.comboBox.currentText()
+        commandType = self.commandTypeBox.currentText()
         commandName = self.commandNameEdit.text()
         if self.checkValues(commandType, commandName):
             if self.command:
                 self.config.remove_section(self.command)
-            commandContents = {'type': self.comboBox.currentText().lower(),
-                                'command': self.plainTextEdit.toPlainText()}
+            commandContents = {'type': self.commandTypeBox.currentText().lower(),
+                                'command': self.commandEdit.toPlainText()}
             self.config[commandName] = commandContents
             with open("config.ini", "w") as f:
                 self.config.write(f)

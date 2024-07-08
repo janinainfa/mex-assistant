@@ -12,7 +12,7 @@ from mexui.main_ui import Ui_MainWindow
 import settings
 
 
-class Window(QMainWindow, Ui_MainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, command_processing, parent=None):
         super().__init__(parent)
         self.setupUi(self)
@@ -33,7 +33,7 @@ class Window(QMainWindow, Ui_MainWindow):
 
 def buildApp(command_processing):
     app = QApplication(sys.argv)
-    win = Window(command_processing)
-    apply_stylesheet(app, theme='dark_medical.xml', css_file='custom.css')
+    win = MainWindow(command_processing)
+    apply_stylesheet(app, theme='dark_blue.xml', css_file='custom.css')
     win.show()
     sys.exit(app.exec())

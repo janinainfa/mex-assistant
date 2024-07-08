@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/Settings.ui'
+# Form implementation generated from reading ui file 'Settings.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Settings(object):
     def setupUi(self, Settings):
         Settings.setObjectName("Settings")
-        Settings.resize(288, 105)
+        Settings.resize(426, 105)
         self.gridLayout = QtWidgets.QGridLayout(Settings)
         self.gridLayout.setObjectName("gridLayout")
         self.label_5 = QtWidgets.QLabel(Settings)

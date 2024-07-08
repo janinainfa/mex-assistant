@@ -13,6 +13,19 @@ class Window(QDialog, Ui_Settings):
         self.setupUi(self)
         self.config = loadConfig()
         self.createCommandLabelsAndButtons()
+        self.setupComboBox()
+
+
+    def setupComboBox(self):
+        lang = self.config["DEFAULT"]["voice_lang"]
+        if lang == "pl-PL":
+            self.comboBox.setCurrentIndex(1)
+        self.comboBox.activated.connect(self.changeLanguage)
+
+    def changeLanguage(self):
+        self.config["DEFAULT"]["voice_lang"] = self.comboBox.currentText()
+        with open("config.ini", "w") as f:
+            self.config.write(f)
 
     def createCommandLabelsAndButtons(self):
         self.commandsLayout = QtWidgets.QGridLayout()

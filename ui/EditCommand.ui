@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>465</width>
     <height>271</height>
    </rect>
   </property>
@@ -16,20 +16,13 @@
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0" colspan="3">
+      <widget class="QPlainTextEdit" name="commandEdit"/>
+     </item>
      <item row="3" column="0" colspan="3">
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Polecenie terminala/program</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" colspan="3">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Edytuj komendę</string>
-       </property>
-       <property name="class" stdset="0">
-        <string>header</string>
        </property>
       </widget>
      </item>
@@ -40,21 +33,8 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Rodzaj komendy</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="3">
-      <widget class="QPlainTextEdit" name="plainTextEdit"/>
-     </item>
-     <item row="1" column="1" colspan="2">
-      <widget class="QLineEdit" name="commandNameEdit"/>
-     </item>
      <item row="2" column="2">
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="commandTypeBox">
        <property name="currentText">
         <string>Wybierz...</string>
        </property>
@@ -75,34 +55,37 @@
        </item>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="saveButton">
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Zapisz</string>
+        <string>Edytuj komendę</string>
+       </property>
+       <property name="class" stdset="0">
+        <string>header</string>
        </property>
       </widget>
      </item>
-     <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Rodzaj komendy</string>
        </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
+      </widget>
      </item>
-     <item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="commandNameEdit"/>
+     </item>
+     <item row="5" column="2">
       <widget class="QPushButton" name="cancelButton">
        <property name="text">
         <string>Anuluj</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Zapisz</string>
        </property>
       </widget>
      </item>
