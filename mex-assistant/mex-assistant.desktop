@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name=Mex Assistant
-Exec=usr/bin/mex-assistant
+Exec=~/mex-assistant
 Icon=mex-assistant
-Comment=Opis mojego programu
+Comment=Prosty asystent głosowy stworzony przy użyciu Pythona i Qt5
 Categories=Utility;
 Terminal=false

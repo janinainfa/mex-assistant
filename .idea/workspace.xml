@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added open config file button">
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added language comboBox functionality, updated window size">
+      <change afterPath="$PROJECT_DIR$/tar-content/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/edit_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mex_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/mex_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mex-assistant.desktop" beforeDir="false" afterPath="$PROJECT_DIR$/tar-content/mex-assistant.desktop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/EditCommand.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/EditCommand.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Settings.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Settings.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ui/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/src/mexui/edit_command_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/edit_command_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/src/mexui/main_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/main_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pip_package/src/mexui/settings_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tar-content/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,24 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.process_command.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.window.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.build.sh.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.update-ui.sh.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.process_command.executor": "Run",
+    "Python.settings.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.window.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.build.sh.executor": "Run",
+    "Shell Script.update-ui.sh.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/jacek/PycharmProjects/mex-assistant/tar-content",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tar-content" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tar-content" />
       <recent name="$PROJECT_DIR$/ui" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -428,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720255270456</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added language comboBox functionality, updated window size">
+      <option name="closed" value="true" />
+      <created>1720475013984</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1720475013984</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,6 +468,7 @@
     <MESSAGE value="added warning dialogs when saving command" />
     <MESSAGE value="added refreshing settings window after editing command" />
     <MESSAGE value="added open config file button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added open config file button" />
+    <MESSAGE value="added language comboBox functionality, updated window size" />
+    <option name="LAST_COMMIT_MESSAGE" value="added language comboBox functionality, updated window size" />
   </component>
 </project>
