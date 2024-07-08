@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added language comboBox functionality, updated window size">
-      <change afterPath="$PROJECT_DIR$/tar-content/config.ini" afterDir="false" />
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added tar content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mex-assistant.desktop" beforeDir="false" afterPath="$PROJECT_DIR$/tar-content/mex-assistant.desktop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tar-content/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/mex-assistant/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mex-assistant/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/mex-assistant/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,28 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.process_command.executor": "Run",
-    "Python.settings.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.window.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.build.sh.executor": "Run",
-    "Shell Script.update-ui.sh.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/jacek/PycharmProjects/mex-assistant/tar-content",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.window.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.build.sh.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.update-ui.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jacek/PycharmProjects/mex-assistant/tar-content&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tar-content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mex-assistant" />
       <recent name="$PROJECT_DIR$/tar-content" />
       <recent name="$PROJECT_DIR$/ui" />
       <recent name="$PROJECT_DIR$" />
@@ -433,7 +431,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720475013984</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added tar content">
+      <option name="closed" value="true" />
+      <created>1720475821114</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1720475821114</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -469,6 +475,7 @@
     <MESSAGE value="added refreshing settings window after editing command" />
     <MESSAGE value="added open config file button" />
     <MESSAGE value="added language comboBox functionality, updated window size" />
-    <option name="LAST_COMMIT_MESSAGE" value="added language comboBox functionality, updated window size" />
+    <MESSAGE value="added tar content" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tar content" />
   </component>
 </project>

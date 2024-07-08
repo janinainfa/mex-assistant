@@ -1,5 +1,6 @@
-chmod +x mex-assistant
+chmod +x mex
 mkdir ~/mex-assistant
-mv mex-assistant ~/mex-assistant
-mv mex-assistant.desktop ~/share/applications
-export PATH="$HOME/mex-assistant:$PATH"
+mv mex ~/mex-assistant
+mv icon.png ~/mex-assistant
+mv mex-assistant.desktop ~/.local/share/applications
+export PATH="$HOME/mex-assistant/mex:$PATH"
