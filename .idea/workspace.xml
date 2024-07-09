@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="fixed reading config">
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/edit_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.custom_commands.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.process_command.executor": "Run",
-    "Python.settings.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.window.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.build.sh.executor": "Run",
-    "Shell Script.update-ui.sh.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/jacek/PycharmProjects/mex-assistant/tar-content",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.create_config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.custom_commands.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_command.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.window.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.build.sh.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.update-ui.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jacek/PycharmProjects/mex-assistant/tar-content&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tar-content" />
@@ -162,14 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716649644053</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update mex-assistant.desktop">
-      <option name="closed" value="true" />
-      <created>1716703726147</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1716703726147</updated>
     </task>
     <task id="LOCAL-00016" summary="update mex-assistant.desktop">
       <option name="closed" value="true" />
@@ -555,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720541534240</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error">
+      <option name="closed" value="true" />
+      <created>1720544204899</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1720544204899</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -570,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update readme and requirements.txt" />
     <MESSAGE value="added custom_commands.py" />
     <MESSAGE value="added music downloading" />
     <MESSAGE value="created pip package for ui" />
@@ -595,6 +592,7 @@
     <MESSAGE value="moved config to ~/mexassistant" />
     <MESSAGE value="fixed (I hope) config handle" />
     <MESSAGE value="fixed reading config" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed reading config" />
+    <MESSAGE value="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error" />
   </component>
 </project>
