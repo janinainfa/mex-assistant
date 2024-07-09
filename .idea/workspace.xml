@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="update python-app.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="typo corrected" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,14 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716649644053</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added spec file">
-      <option name="closed" value="true" />
-      <created>1716673322898</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1716673322898</updated>
     </task>
     <task id="LOCAL-00010" summary="added spec file">
       <option name="closed" value="true" />
@@ -552,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720533859756</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="typo corrected">
+      <option name="closed" value="true" />
+      <created>1720534260618</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1720534260618</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -567,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added spec file" />
     <MESSAGE value="update mex-assistant.desktop" />
     <MESSAGE value="created not working gui" />
     <MESSAGE value="added comamnd processing and try-except in recognizing voice" />
@@ -592,6 +587,7 @@
     <MESSAGE value="added deb-package diretory to git (I forgot xd)" />
     <MESSAGE value="update package name to mexassistant" />
     <MESSAGE value="update python-app.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update python-app.yml" />
+    <MESSAGE value="typo corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo corrected" />
   </component>
 </project>

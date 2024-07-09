@@ -24,7 +24,7 @@ class Window(QDialog, Ui_Settings):
 
     def changeLanguage(self):
         self.config["DEFAULT"]["voice_lang"] = self.comboBox.currentText()
-        with open("config.ini", "w") as f:
+        with open("/etc/mexassistant/config.ini", "w") as f:
             self.config.write(f)
 
     def createCommandLabelsAndButtons(self):
@@ -75,7 +75,7 @@ class Window(QDialog, Ui_Settings):
         dialogResult = openDialog("Na pewno? Tej czynności nie będzie można cofnąć.", "confirmation")
         if dialogResult == QMessageBox.Yes:
             self.config.remove_section(command)
-            with open("config.ini", "w") as f:
+            with open("/etc/mexassistant/config.ini", "w") as f:
                 self.config.write(f)
             self.refreshCommands()
 

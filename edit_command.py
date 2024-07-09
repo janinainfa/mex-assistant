@@ -37,7 +37,7 @@ class Window(QDialog, Ui_Dialog):
             commandContents = {'type': self.commandTypeBox.currentText().lower(),
                                 'command': self.commandEdit.toPlainText()}
             self.config[commandName] = commandContents
-            with open("config.ini", "w") as f:
+            with open("/etc/mexassistant/config.ini", "w") as f:
                 self.config.write(f)
             self.reject()
 
