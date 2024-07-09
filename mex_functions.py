@@ -1,5 +1,5 @@
 import configparser
-
+import os
 import sounddevice as sd
 import speech_recognition as sr
 import soundfile as sf
@@ -49,7 +49,7 @@ def printText(text, window):
 
 def loadConfig():
     config = configparser.ConfigParser()
-    config.read("~/mex-assistant/config.ini")
+    config.read(os.path.expanduser("~") + "/mexassistant/config.ini")
     return config
 
 def openDialog(message, dialogType):
