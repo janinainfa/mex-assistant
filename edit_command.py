@@ -1,5 +1,4 @@
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTableWidgetItem
+from PyQt5.QtWidgets import QDialog, QMessageBox
 from mexui.edit_command_ui import Ui_Dialog
 
 from mex_functions import loadConfig, openDialog

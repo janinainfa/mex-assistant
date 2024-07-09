@@ -1,10 +1,8 @@
-import json
-import os
 import sys
-import subprocess
 
-from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QMessageBox, QTableWidgetItem
-from PyQt5.uic import loadUi
+
+from PyQt5.QtWidgets import QApplication, QMainWindow
+
 from qt_material import apply_stylesheet
 
 from mexui.main_ui import Ui_MainWindow

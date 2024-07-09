@@ -25,6 +25,8 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
+        sudo apt-get update
+        sudo apt-get install dh-make devscripts build-essential
         python -m pip install --upgrade pip
         pip install flake8
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -40,15 +42,17 @@ jobs:
         pip install pyinstaller
         pyinstaller --name=mex-assistant --onefile main.py
 
-    - name: Create App Directory
+    - name: Create Deb Package
       run: |
-        cp -r mex dist
-        mv dist/mex-assistant dist/mex
+        cp -r deb-package dist
+        mv dist/mex-assistant dist/deb-package/usr/local/bin
+        mv deb-package mex-assistant
+        dpkg-deb --build myproject
     
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: mex
+        name: mex-assistant
         path: dist/
 
       

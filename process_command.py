@@ -1,4 +1,3 @@
-import configparser
 import re
 import subprocess
 import custom_commands as cc
