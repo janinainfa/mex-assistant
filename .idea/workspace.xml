@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added deb-package diretory to git (I forgot xd)" />
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="update package name to mexassistant">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python-app.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python-app.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb-package/DEBIAN/control" beforeDir="false" afterPath="$PROJECT_DIR$/deb-package/DEBIAN/control" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb-package/etc/mex-assistant/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/deb-package/etc/mexassistant/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb-package/usr/share/applications/myproject.desktop" beforeDir="false" afterPath="$PROJECT_DIR$/deb-package/usr/share/applications/mexassistant.desktop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb-package/usr/share/icons/hicolor/256x256/apps/mex-assistant.png" beforeDir="false" afterPath="$PROJECT_DIR$/deb-package/usr/share/icons/hicolor/256x256/apps/mexassistant.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -476,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720527457905</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update package name to mexassistant">
+      <option name="closed" value="true" />
+      <created>1720529017195</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1720529017195</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -491,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init version" />
     <MESSAGE value="still testing" />
     <MESSAGE value="added spec file" />
     <MESSAGE value="update mex-assistant.desktop" />
@@ -516,6 +530,7 @@
     <MESSAGE value="update setup.sh" />
     <MESSAGE value="deleted unused imports, added deb package" />
     <MESSAGE value="added deb-package diretory to git (I forgot xd)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deb-package diretory to git (I forgot xd)" />
+    <MESSAGE value="update package name to mexassistant" />
+    <option name="LAST_COMMIT_MESSAGE" value="update package name to mexassistant" />
   </component>
 </project>
