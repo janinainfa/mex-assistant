@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error">
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="updated README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -160,14 +160,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716649644053</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update mex-assistant.desktop">
-      <option name="closed" value="true" />
-      <created>1716705659079</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1716705659079</updated>
     </task>
     <task id="LOCAL-00017" summary="created not working gui">
       <option name="closed" value="true" />
@@ -553,7 +545,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720544204899</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="updated README.md">
+      <option name="closed" value="true" />
+      <created>1720547768320</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1720547768320</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -568,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added custom_commands.py" />
     <MESSAGE value="added music downloading" />
     <MESSAGE value="created pip package for ui" />
     <MESSAGE value="added qt-material to requirements.txt" />
@@ -593,6 +592,7 @@
     <MESSAGE value="fixed (I hope) config handle" />
     <MESSAGE value="fixed reading config" />
     <MESSAGE value="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed reading config #1000, deleted downloading from yt bc it wasn't working due to a library error" />
+    <MESSAGE value="updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README.md" />
   </component>
 </project>

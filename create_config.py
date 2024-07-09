@@ -18,12 +18,7 @@ command = window.close()
 type = python
 command = results = gw.getWeather()
 	speak(f"Jest {results[0]} stopni, odczuwalne {results[1]} stopni i {results[2]}")
-
-[pobierz muzykę]
-type = python
-command = speak("Podaj tytuł:")
-	cc.downloadFromYT(takeVoice(3, window))
-
+	
 [puść muzykę]
 type = terminal
 command = playerctl play

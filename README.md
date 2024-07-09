@@ -20,4 +20,16 @@ python3 main.py
 ## Własne komendy
 Możesz tworzyć własne komendy przy użyciu ustawień (Plik > Ustawienia) lub edytując plik konfiguracyjny, który znajduje się w folderze`~/mexassistant`.
 Każda komenda ma swoją nazwę, która po powiedzeniu do asystenta ją aktywuje, oraz typ, który decyduje czy komenda jest wykonywana jako skrypt powłoki czy skrypt Pythona.
+
+
+Przykładowa komenda w ustawieniach:
+![Przykładowa komenda](sample-command.png)
+
+
+Ta sama komenda w pliku konfiguracyjnym:
+```ini
+[otwórz terminal]
+type = terminal
+command = gnome-terminal
+```
 Jeśli "przypadkiem" usuniesz w ustawieniach wszystkie komendy lub chcesz je zresetować do domyślnych, usuń plik konfiguracyjny (`~/mexassistant/config.ini`), następnie uruchom program ponownie.
