@@ -48,7 +48,7 @@ jobs:
         cd dist/deb-package
         mkdir -p /usr/local/bin
         cd ..
-        mv mexassistant mex
+        mv mexassistant deb-package
         dpkg-deb --build mexassistant
     
     - name: Saving Artifacts
