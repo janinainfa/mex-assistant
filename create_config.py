@@ -1,4 +1,9 @@
-[DEFAULT]
+import os
+
+homeDir = os.path.expanduser("~")
+
+
+configContent = '''[DEFAULT]
 voice_lang = pl-PL
 
 [otwórz terminal]
@@ -29,5 +34,15 @@ command = playerctl pause
 
 [następna piosenka]
 type = terminal
-command = playerctl next
+command = playerctl next'''
+
+def createConfig():
+    try:
+        os.mkdir(homeDir + "/mexassistant")
+    except:
+        pass
+    finally:
+        with open(homeDir + "/mexassistant/config.ini", 'w') as f:
+            f.write(configContent)
+
 
