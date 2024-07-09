@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+# Pobierz nazwę użytkownika, który uruchomił instalację pakietu
+USER=$(logname)
+
+# Ścieżki do katalogu domowego
+HOME_DIR="/home/$USER"
+DEST_DIR="$HOME_DIR/mexassistant"
+
+# Utwórz katalog, jeśli nie istnieje
+mkdir -p "$DEST_DIR"
+
+# Skopiuj pliki do katalogu domowego
+cp /home/user/mexassistant/user_config.cfg "$DEST_DIR/"
+
+# Ustaw odpowiednie uprawnienia
+chown -R "$USER:$USER" "$DEST_DIR"
+
+exit 0
