@@ -46,7 +46,7 @@ class Window(QDialog, Ui_Settings):
         self.commandsLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
         self.openConfigFileButton = QtWidgets.QPushButton(self)
         self.openConfigFileButton.setText("Otwórz plik konfiguracyjny")
-        self.openConfigFileButton.pressed.connect(lambda: subprocess.Popen(["xed", "/etc/mex-assistant/config.ini"]))
+        self.openConfigFileButton.pressed.connect(lambda: subprocess.Popen(["xed", "/etc/mexassistant/config.ini"]))
         self.commandsLayout.addWidget(self.openConfigFileButton, len(sections) + 3, 0, 1, 3)
 
         self.gridLayout.addLayout(self.commandsLayout, 2, 0, 1, 3)
