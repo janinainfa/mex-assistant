@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="deleted unused imports, added deb package" />
+    <list default="true" id="936a973f-ad51-4a58-be6e-649aaca94e6d" name="Changes" comment="added deb-package diretory to git (I forgot xd)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -468,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720527178621</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added deb-package diretory to git (I forgot xd)">
+      <option name="closed" value="true" />
+      <created>1720527457905</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1720527457905</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,6 +515,7 @@
     <MESSAGE value="added tar content" />
     <MESSAGE value="update setup.sh" />
     <MESSAGE value="deleted unused imports, added deb package" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted unused imports, added deb package" />
+    <MESSAGE value="added deb-package diretory to git (I forgot xd)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added deb-package diretory to git (I forgot xd)" />
   </component>
 </project>

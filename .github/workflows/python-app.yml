@@ -40,19 +40,19 @@ jobs:
     - name: Build Exec
       run: |
         pip install pyinstaller
-        pyinstaller --name=mex-assistant --onefile main.py
+        pyinstaller --name=mexassistant --onefile main.py
 
     - name: Create Deb Package
       run: |
         cp -r deb-package dist
-        mv dist/mex-assistant dist/deb-package/usr/local/bin
-        mv deb-package mex-assistant
-        dpkg-deb --build myproject
+        mv dist/mexassistant dist/deb-package/usr/local/bin
+        mv dist/deb-package dist/mexassistant
+        dpkg-deb --build dist/mexassistant
     
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: mex-assistant
+        name: mexassistant-deb
         path: dist/
 
       
