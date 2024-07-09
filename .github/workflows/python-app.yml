@@ -48,6 +48,7 @@ jobs:
         cd dist/deb-package
         mkdir -p /usr/local/bin
         cd ..
+        ls deb-package/usr/local
         mv mexassistant deb-package/usr/local/bin
         mv deb-package mexassistant
         dpkg-deb --build mexassistant
