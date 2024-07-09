@@ -46,7 +46,7 @@ jobs:
       run: |
         cp -r deb-package dist
         cd dist/deb-package
-        mkidr -p /usr/local/bin
+        mkdir -p /usr/local/bin
         cd ..
         mv mexassistant deb-package/usr/local/bin
         mv deb-package mexassistant
