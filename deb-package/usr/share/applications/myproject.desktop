@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Mex Assistant
+Comment=Prosty asystent głosowy stworzony przy użyciu Pythona i Qt5.
+Exec=/usr/local/bin/mex-assistant
+Icon=/usr/share/icons/hicolor/256x256/apps/mex-assistant.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
