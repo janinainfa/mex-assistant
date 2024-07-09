@@ -45,8 +45,9 @@ jobs:
     - name: Create Deb Package
       run: |
         cp -r deb-package dist
+        cd dist
         ls
-        cd dist/deb-package
+        cd deb-package
         mkdir -p /usr/local/bin
         cd ..
         mv mexassistant deb-package/usr/local/bin
