@@ -16,7 +16,7 @@ command = window.close()
 
 [pogoda]
 type = python
-command = results = cc.getWeather()
+command = results = gw.getWeather()
 	speak(f"Jest {results[0]} stopni, odczuwalne {results[1]} stopni i {results[2]}")
 
 [pobierz muzykę]

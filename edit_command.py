@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QDialog, QMessageBox
 from mexui.edit_command_ui import Ui_Dialog
-
+import os
 from mex_functions import loadConfig, openDialog
 
 class Window(QDialog, Ui_Dialog):
@@ -37,7 +37,7 @@ class Window(QDialog, Ui_Dialog):
             commandContents = {'type': self.commandTypeBox.currentText().lower(),
                                 'command': self.commandEdit.toPlainText()}
             self.config[commandName] = commandContents
-            with open("~/mexassistant/config.ini", "w") as f:
+            with open(os.path.expanduser("~") + "/mexassistant/config.ini", "w") as f:
                 self.config.write(f)
             self.reject()
 

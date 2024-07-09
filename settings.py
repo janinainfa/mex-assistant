@@ -1,5 +1,4 @@
-import subprocess
-
+import os
 from PyQt5 import QtWidgets, sip
 from PyQt5.QtWidgets import QDialog, QMessageBox
 from mexui.settings_ui import Ui_Settings
@@ -24,7 +23,7 @@ class Window(QDialog, Ui_Settings):
 
     def changeLanguage(self):
         self.config["DEFAULT"]["voice_lang"] = self.comboBox.currentText()
-        with open("/etc/mexassistant/config.ini", "w") as f:
+        with open(os.path.expanduser("~") + "/mexassistant/config.ini", "w") as f:
             self.config.write(f)
 
     def createCommandLabelsAndButtons(self):
@@ -44,10 +43,6 @@ class Window(QDialog, Ui_Settings):
         self.newCommandButton.setText("Dodaj nową komendę")
         self.newCommandButton.pressed.connect(lambda: self.buttonClicked("edit"))
         self.commandsLayout.addWidget(self.newCommandButton, len(sections) + 2, 0, 1, 3)
-        self.openConfigFileButton = QtWidgets.QPushButton(self)
-        self.openConfigFileButton.setText("Otwórz plik konfiguracyjny")
-        self.openConfigFileButton.pressed.connect(lambda: subprocess.Popen(["xed", "/etc/mexassistant/config.ini"]))
-        self.commandsLayout.addWidget(self.openConfigFileButton, len(sections) + 3, 0, 1, 3)
 
         self.gridLayout.addLayout(self.commandsLayout, 2, 0, 1, 3)
 
@@ -75,7 +70,7 @@ class Window(QDialog, Ui_Settings):
         dialogResult = openDialog("Na pewno? Tej czynności nie będzie można cofnąć.", "confirmation")
         if dialogResult == QMessageBox.Yes:
             self.config.remove_section(command)
-            with open("/etc/mexassistant/config.ini", "w") as f:
+            with open(os.path.expanduser("~") + "/mexassistant/config.ini", "w") as f:
                 self.config.write(f)
             self.refreshCommands()
 

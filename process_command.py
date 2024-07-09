@@ -1,6 +1,6 @@
 import re
 import subprocess
-import custom_commands as cc
+import get_weather as gw
 from mex_functions import *
 
 class CommandProcessing():
@@ -20,8 +20,9 @@ class CommandProcessing():
                         exec(config[i]["command"])
                     else:
                         speak("Nie udało się rozpoznać typu polecenia")
-                except:
+                except Exception as e:
                     speak("Coś poszło nie tak. Upewnij się, że polecenie jest ustawione poprawnie")
+                    print(e)
 
                 break
 
