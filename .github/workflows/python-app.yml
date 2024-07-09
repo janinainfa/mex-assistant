@@ -46,9 +46,11 @@ jobs:
       run: |
         cp -r deb-package dist
         cd dist/deb-package
-        mv dist/mexassistant dist/deb-package/
-        mv dist/deb-package dist/mexassistant
-        dpkg-deb --build dist/mexassistant
+        mkidr -p /usr/local/bin
+        cd ..
+        mv mexassistant deb-package/usr/local/bin
+        mv deb-package mexassistant
+        dpkg-deb --build mexassistant
     
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
