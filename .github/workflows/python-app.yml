@@ -51,11 +51,12 @@ jobs:
         mv mexassistant deb-package/usr
         mv deb-package mexassistant
         dpkg-deb --build mexassistant
+        rm -r mexassistant
     
     - name: Saving Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: mexassistant-deb
+        name: mexassistant
         path: dist/
 
       
