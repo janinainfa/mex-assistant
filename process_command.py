@@ -4,8 +4,6 @@ import custom_commands as cc
 from mex_functions import *
 
 class CommandProcessing():
-    def __init__(self):
-        pass
 
     def processCommand(self, window):
         command = takeVoice(3, window)

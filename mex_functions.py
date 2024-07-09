@@ -49,7 +49,7 @@ def printText(text, window):
 
 def loadConfig():
     config = configparser.ConfigParser()
-    config.read("/etc/mex-assistant/config.ini")
+    config.read("~/mex-assistant/config.ini")
     return config
 
 def openDialog(message, dialogType):
